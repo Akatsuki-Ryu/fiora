@@ -6,10 +6,10 @@ services:
     restart: always
     ports:
       - "27017:27017"
-  fiora:
+  belmondofiora:
     build: .
     restart: always
     ports:
-      - "9200:9200"
+      - "3111:3111"
     environment:
-      - "Database=mongodb://mongoDB/fiora"
+      - "Database=mongodb://mongoDB/belmondofiora"

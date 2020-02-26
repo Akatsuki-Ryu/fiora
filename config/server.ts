@@ -8,10 +8,10 @@ export default {
     host: options.host || env.Host || ip.address(),
 
     // service port
-    port: options.port || env.Port || 9200,
+    port: options.port || env.Port || 3111,
 
     // mongodb address
-    database: options.database || env.Database || 'mongodb://localhost:27017/fiora',
+    database: options.database || env.Database || 'mongodb://localhost:27017/belmondofiora',
 
     // jwt encryption secret
     jwtSecret: options.jwtSecret || env.JwtSecret || 'jwtSecret',
@@ -34,7 +34,7 @@ export default {
     administrator: options.administrator || env.Administrator || '',
 
     // default group name
-    defaultGroupName: 'fiora',
+    defaultGroupName: '老板们的避难所',
 
     /** 禁用注册功能 */
     disableRegister: false,
