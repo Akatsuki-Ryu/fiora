@@ -75,7 +75,7 @@ export default function getData() {
         sound: getTextValue(LocalStorageKey.Sound, config.sound),
         soundSwitch: getSwitchValue(LocalStorageKey.SoundSwitch),
         notificationSwitch: getSwitchValue(LocalStorageKey.NotificationSwitch),
-        voiceSwitch: getSwitchValue(LocalStorageKey.VoiceSwitch),
+        voiceSwitch: getSwitchValue(LocalStorageKey.VoiceSwitch, false),
         selfVoiceSwitch: getSwitchValue(LocalStorageKey.SelfVoiceSwitch, false),
         tagColorMode: getTextValue(LocalStorageKey.TagColorMode, config.tagColorMode),
     };
