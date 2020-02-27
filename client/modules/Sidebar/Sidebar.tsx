@@ -110,26 +110,26 @@ function Sidebar() {
                                 onClick={() => toggleAdminDialogVisible(true)}
                             />,
                         )}
-                    <Tooltip placement="right" mouseEnterDelay={0.3} overlay={<span>源码</span>}>
-                        <a
-                            className={Style.linkButton}
-                            href="https://github.com/yinxin630/fiora"
-                            target="_black"
-                            rel="noopener noreferrer"
-                        >
-                            <IconButton width={40} height={40} icon="github" iconSize={26} />
-                        </a>
-                    </Tooltip>
-                    {renderTooltip(
-                        '下载APP',
-                        <IconButton
-                            width={40}
-                            height={40}
-                            icon="app"
-                            iconSize={28}
-                            onClick={() => toggleDownloadDialogVisible(true)}
-                        />,
-                    )}
+                    {/* <Tooltip placement="right" mouseEnterDelay={0.3} overlay={<span>源码</span>}> */}
+                    {/*    <a */}
+                    {/*        className={Style.linkButton} */}
+                    {/*        href="https://github.com/yinxin630/fiora" */}
+                    {/*        target="_black" */}
+                    {/*        rel="noopener noreferrer" */}
+                    {/*    > */}
+                    {/*        <IconButton width={40} height={40} icon="github" iconSize={26} /> */}
+                    {/*    </a> */}
+                    {/* </Tooltip> */}
+                    {/* {renderTooltip( */}
+                    {/*    '下载APP', */}
+                    {/*    <IconButton */}
+                    {/*        width={40} */}
+                    {/*        height={40} */}
+                    {/*        icon="app" */}
+                    {/*        iconSize={28} */}
+                    {/*        onClick={() => toggleDownloadDialogVisible(true)} */}
+                    {/*    />, */}
+                    {/* )} */}
                     {renderTooltip(
                         '打赏',
                         <IconButton

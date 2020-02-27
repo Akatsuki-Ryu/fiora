@@ -18,16 +18,21 @@ function Reward(props: RewardProps) {
             onClose={onClose}
         >
             <div>
-                <p className={Style.text}>
-                    如果你觉得这个聊天室代码对你有帮助, 希望打赏下给个鼓励~~
-                    <br />
-                    作者大多数时间在线, 欢迎提问, 有问必答
-                </p>
-                <div className={Style.imageContainer}>
-                    <img className={Style.image} src={require('../../assets/images/alipay.png')} alt="支付宝二维码" />
-                    <img className={Style.image} src={require('../../assets/images/wxpay.png')} alt="微信二维码" />
-                </div>
+                <p>因为面临巨大的服务器租金风险，所以需要大家的打赏，具体内容近期公开</p>
             </div>
+            {/* <div> */}
+            {/*    <p className={Style.text}> */}
+            {/*        如果你觉得这个聊天室代码对你有帮助, 希望打赏下给个鼓励~~ */}
+            {/*        <br /> */}
+            {/*        作者大多数时间在线, 欢迎提问, 有问必答 */}
+            {/*    </p> */}
+            {/*    <div className={Style.imageContainer}> */}
+            {/* <img className={Style.image}
+            src={require('../../assets/images/alipay.png')} alt="支付宝二维码" /> */}
+            {/* <img className={Style.image}
+            src={require('../../assets/images/wxpay.png')} alt="微信二维码" /> */}
+            {/*    </div> */}
+            {/* </div> */}
         </Dialog>
     );
 }
