@@ -11,5 +11,6 @@ services:
     restart: always
     ports:
       - "3111:3111"
+      - "443:443"
     environment:
       - "Database=mongodb://mongoDB/belmondofiora"
