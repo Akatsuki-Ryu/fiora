@@ -8,7 +8,7 @@ import options from '../utils/commandOptions';
 // eslint-disable-next-line prefer-destructuring
 const env = process.env;
 
-function getFirstNotUndefined(...values) {
+function getFirstNotUndefined(...values: any[]) {
     for (let i = 0; i < values.length; i++) {
         if (values[i] !== undefined) {
             return values[i];
@@ -51,7 +51,6 @@ export default {
         port: 8080,
         autoOpenBrowser: false,
         assetsPublicPath: '/',
-        proxyTable: {},
         cssSourceMap: false,
     },
 };
