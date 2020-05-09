@@ -87,13 +87,13 @@ export interface User {
 /** redux store state */
 export interface State {
     /** 用户信息 */
-    user?: {
+    user: {
         _id: string;
         username: string;
         avatar: string;
         tag: string;
         isAdmin: boolean;
-    };
+    } | null;
     linkmans: LinkmansMap;
     /** 聚焦的联系人 */
     focus: string;
@@ -300,7 +300,9 @@ function reducer(state: State = initialState, action: Action): State {
             } = action.payload as SetUserPayload;
             // @ts-ignore
             const linkmans: Linkman[] = [
+                // @ts-ignore
                 ...groups.map(transformGroup),
+                // @ts-ignore
                 ...friends.map(transformFriend),
             ];
             linkmans.forEach((linkman) => {
@@ -335,6 +337,7 @@ function reducer(state: State = initialState, action: Action): State {
             const payload = action.payload as UpdateUserInfoPayload;
             return {
                 ...state,
+                // @ts-ignore
                 user: {
                     ...state.user,
                     ...payload,
@@ -354,6 +357,7 @@ function reducer(state: State = initialState, action: Action): State {
         case ActionTypes.SetAvatar: {
             return {
                 ...state,
+                // @ts-ignore
                 user: {
                     ...state.user,
                     avatar: action.payload as string,
@@ -448,12 +452,15 @@ function reducer(state: State = initialState, action: Action): State {
             const linkmanMessages = action.payload as SetLinkmansLastMessagesPayload;
             const { linkmans } = state;
             const newState = { ...state, linkmans: {} };
-            Object.keys(linkmanMessages).forEach((linkmanId) => {
+            Object.keys(linkmans).forEach((linkmanId) => {
+                // @ts-ignore
                 newState.linkmans[linkmanId] = {
                     ...linkmans[linkmanId],
                     messages: {
                         ...linkmans[linkmanId].messages,
-                        ...getMessagesMap(linkmanMessages[linkmanId]),
+                        ...(linkmanMessages[linkmanId]
+                            ? getMessagesMap(linkmanMessages[linkmanId])
+                            : {}),
                     },
                 };
             });
